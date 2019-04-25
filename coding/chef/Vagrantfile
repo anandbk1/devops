@@ -1,0 +1,35 @@
+# ------- Chef Server ---------- #
+
+Vagrant.configure("2") do |config|
+      config.vm.define "chefserver" do |chefserver|
+         chefserver.vm.box = "ubuntu/xenial64"
+         chefserver.vm.hostname = "chefserver.example.com"
+	 chefserver.vm.network "private_network", ip: "192.168.33.10"
+         chefserver.vm.provider "virtualbox" do |vb|
+			vb.memory = "2500"
+	 end
+      end		 
+
+# ------- Chef Node ---------- #
+  
+      config.vm.define "chefnode" do |chefnode|
+         chefnode.vm.box = "ubuntu/xenial64"
+         chefnode.vm.hostname = "chefnode.example.com"
+	 chefnode.vm.network "private_network", ip: "192.168.33.11"
+         chefnode.vm.provider "virtualbox" do |vb|
+			vb.memory = "512"
+	 end
+      end
+
+
+# ------- Chef Workstation ---------- #
+  
+      config.vm.define "chefworkstation" do |chefworkstation|
+         chefworkstation.vm.box = "ubuntu/xenial64"
+         chefworkstation.vm.hostname = "chefworkstation.example.com"
+	 chefworkstation.vm.network "private_network", ip: "192.168.33.12"
+         chefworkstation.vm.provider "virtualbox" do |vb|
+			vb.memory = "512"
+	 end
+      end
+end	 

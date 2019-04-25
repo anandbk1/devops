@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant_data":{"guestpath":"/vagrant_data","hostpath":"C:/Users/Kushappa/devops/provision/vagrant/data","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Kushappa/devops/provision/vagrant/ubuntu","disabled":false,"__vagrantfile":true}}}
